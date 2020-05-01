@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#AltaVelocidad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#AltaVelocidad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#BusinessHotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#BusinessHotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ferry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ferry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
