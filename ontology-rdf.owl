@@ -1,12 +1,216 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#"
      xml:base="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2"
+     xmlns:turism-ontology="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2"/>
+    <owl:Ontology rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#con_direccion -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#con_direccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#con_estancia -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#con_estancia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#del_pais -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#del_pais">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#medio_transporte -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#medio_transporte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#origen -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#origen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ubicado_en -->
+
+    <owl:ObjectProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ubicado_en">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+        <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#clase_trasporte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#clase_trasporte">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#codigo_pais -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#codigo_pais">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#codigo_postal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#codigo_postal">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#estrellas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#estrellas">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hace_escala -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hace_escala">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#nombre_direccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#nombre_direccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#nombre_pais -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#nombre_pais">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#sector_trabajo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#sector_trabajo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#via_direccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#via_direccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -21,232 +225,313 @@
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#AltaVelocidad -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Apartamento -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#AltaVelocidad">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Apartamento">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Barco -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Barco">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#CasaRural -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#CasaRural">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#BusinessHotel -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#BusinessHotel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoCultural -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoCultural">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoEmpleo -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoEmpleo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                        <owl:allValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoGastronomico -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoGastronomico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                        <owl:allValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoOceanico -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoOceanico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#medio_transporte"/>
+                        <owl:allValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Barco"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Tren -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
-    
-
-
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ferry -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ferry">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Tren">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaCultural -->
+
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaCultural">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaDeportiva -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Interurbano">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaDeportiva">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaMuseo -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#LoveHotel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaMuseo">
+        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-gran-canaria-pack-negocios -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais"/>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-gran-canaria-pack-negocios">
+        <turism-ontology:con_estancia rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina"/>
+        <turism-ontology:medio_transporte rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter"/>
+        <turism-ontology:realizando_actividades rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol"/>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#españa -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Transatlantico">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#españa">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+        <turism-ontology:codigo_pais>es</turism-ontology:codigo_pais>
+        <turism-ontology:nombre_pais>España</turism-ontology:nombre_pais>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina">
+        <turism-ontology:ubicado_en rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc"/>
+        <turism-ontology:estrellas rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</turism-ontology:estrellas>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion"/>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
+        <turism-ontology:sector_trabajo>Petrolera</turism-ontology:sector_trabajo>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <turism-ontology:codigo_postal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35007</turism-ontology:codigo_postal>
+        <turism-ontology:nombre_direccion>Santa Catalina</turism-ontology:nombre_direccion>
+        <turism-ontology:via_direccion>Parque</turism-ontology:via_direccion>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <turism-ontology:con_direccion rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina"/>
+        <turism-ontology:del_pais rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#españa"/>
+    </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo -->
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
-    </owl:Class>
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion"/>
+        <turism-ontology:clase_trasporte>Normal</turism-ontology:clase_trasporte>
+        <turism-ontology:hace_escala rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</turism-ontology:hace_escala>
+    </owl:NamedIndividual>
     
 
 
@@ -261,55 +546,49 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Actividad"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DestinoTuristico"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Direccion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Estancia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#MedioTransporte"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Pais"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Ubicacion"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadDeportiva"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadGastronomia"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadTrabajo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#ActividadVisita"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Apartamento"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#CasaRural"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Hotel"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Apartamento"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#CasaRural"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Avion"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Barco"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#Tren"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Barco"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Tren"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAcuatico"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteAereo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#DeporteMontana"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaCultural"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaDeportiva"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaMuseo"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/darkhorrow/ontologies/2020/4/untitled-ontology-2#VisitaOcio"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoCultural"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoEmpleo"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoGastronomico"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost"/>
+            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoOceanico"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
