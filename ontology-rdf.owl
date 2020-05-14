@@ -140,6 +140,17 @@
     
 
 
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#coste -->
+
+    <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#coste">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#estrellas -->
 
     <owl:DatatypeProperty rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#estrellas">
@@ -308,10 +319,18 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
-                        <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                                <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaCultural"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                                <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaMuseo"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -321,7 +340,27 @@
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                                <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
+                                <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaDeportiva"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -334,7 +373,7 @@
                     <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#realizando_actividades"/>
-                        <owl:allValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -400,7 +439,17 @@
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel -->
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel">
-        <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#estrellas"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -472,6 +521,7 @@
         <turism-ontology:con_estancia rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina"/>
         <turism-ontology:medio_transporte rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter"/>
         <turism-ontology:realizando_actividades rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol"/>
+        <turism-ontology:coste rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200.0</turism-ontology:coste>
     </owl:NamedIndividual>
     
 
@@ -498,7 +548,6 @@
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol -->
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol">
-        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
         <turism-ontology:sector_trabajo>Petrolera</turism-ontology:sector_trabajo>
     </owl:NamedIndividual>
     
