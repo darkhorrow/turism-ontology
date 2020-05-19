@@ -402,7 +402,28 @@
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#coste"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">500.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -476,7 +497,22 @@
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#con_direccion"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#del_pais"/>
+                        <owl:someValuesFrom rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -515,13 +551,34 @@
     
 
 
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#casa-rural-lachimenea -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#casa-rural-lachimenea">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#CasaRural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-esqui-pack -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-esqui-pack">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+        <turism-ontology:con_estancia rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#casa-rural-lachimenea"/>
+        <turism-ontology:medio_transporte rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#iberia-avion"/>
+        <turism-ontology:realizando_actividades rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#esqui-sierranevada"/>
+        <turism-ontology:coste rdf:datatype="http://www.w3.org/2001/XMLSchema#double">400.0</turism-ontology:coste>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-gran-canaria-pack-negocios -->
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#destino-gran-canaria-pack-negocios">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
         <turism-ontology:con_estancia rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina"/>
         <turism-ontology:medio_transporte rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter"/>
         <turism-ontology:realizando_actividades rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol"/>
-        <turism-ontology:coste rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200.0</turism-ontology:coste>
+        <turism-ontology:coste rdf:datatype="http://www.w3.org/2001/XMLSchema#double">600.0</turism-ontology:coste>
     </owl:NamedIndividual>
     
 
@@ -536,11 +593,41 @@
     
 
 
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#esqui-sierranevada -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#esqui-sierranevada">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#granada -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#granada">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <turism-ontology:codigo_postal rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">18900</turism-ontology:codigo_postal>
+        <turism-ontology:nombre_direccion>Amargura, Mairena</turism-ontology:nombre_direccion>
+        <turism-ontology:via_direccion>calle</turism-ontology:via_direccion>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina -->
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#hotel-santa-catalina">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Hotel"/>
         <turism-ontology:ubicado_en rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc"/>
         <turism-ontology:estrellas rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">5</turism-ontology:estrellas>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#iberia-avion -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#iberia-avion">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion"/>
+        <turism-ontology:clase_trasporte>turista</turism-ontology:clase_trasporte>
+        <turism-ontology:hace_escala rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turism-ontology:hace_escala>
     </owl:NamedIndividual>
     
 
@@ -548,6 +635,7 @@
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol -->
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#reunion-repsol">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
         <turism-ontology:sector_trabajo>Petrolera</turism-ontology:sector_trabajo>
     </owl:NamedIndividual>
     
@@ -567,8 +655,17 @@
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc -->
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina-las-palmas-gc">
-        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
         <turism-ontology:con_direccion rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#santa-catalina"/>
+        <turism-ontology:del_pais rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#españa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#sierra_nevada -->
+
+    <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#sierra_nevada">
+        <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <turism-ontology:con_direccion rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#granada"/>
         <turism-ontology:del_pais rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#españa"/>
     </owl:NamedIndividual>
     
@@ -636,7 +733,6 @@
             <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoDeportivo"/>
             <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoEmpleo"/>
             <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoGastronomico"/>
-            <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoLowCost"/>
             <rdf:Description rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristicoOceanico"/>
         </owl:members>
     </rdf:Description>
