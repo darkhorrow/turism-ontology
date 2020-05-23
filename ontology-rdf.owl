@@ -29,6 +29,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+        <rdfs:comment xml:lang="es">Dirección de una ubicación</rdfs:comment>
+        <rdfs:label xml:lang="es">con_direccion</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -40,6 +42,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+        <rdfs:comment xml:lang="es">Estancia de un destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">con_estancia</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -51,6 +55,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+        <rdfs:comment xml:lang="es">País de una ubicación</rdfs:comment>
+        <rdfs:label xml:lang="es">del_pais</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -61,6 +67,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:comment xml:lang="es">Medio de transporte de un destino</rdfs:comment>
+        <rdfs:label xml:lang="es">medio_transporte</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -71,6 +79,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <rdfs:comment xml:lang="es">Origen de la gastronomía de una actividad gastronómica</rdfs:comment>
+        <rdfs:label xml:lang="es">origen</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -81,6 +91,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+        <rdfs:comment xml:lang="es">Actividad realizada en un destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">realizando_actividades</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -92,6 +104,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
         <rdfs:range rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Ubicacion"/>
+        <rdfs:comment xml:lang="es">Ubicación de un destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">ubicado_en</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -113,7 +127,31 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Económica</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Primera</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Standar</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="es">Clase de un transporte</rdfs:comment>
+        <rdfs:label xml:lang="es">clase_trasporte</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -125,6 +163,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="es">Código de un país</rdfs:comment>
+        <rdfs:label xml:lang="es">codigo_pais</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -136,6 +176,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:comment xml:lang="es">Código postal de una dirección</rdfs:comment>
+        <rdfs:label xml:lang="es">codigo_postal</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -147,6 +189,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="es">Coste total de un destíno turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">coste</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -167,6 +211,8 @@
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="es">Número de estrellas de un hotel</rdfs:comment>
+        <rdfs:label xml:lang="es">estrellas</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -178,6 +224,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="es">Indica si en el viaje al destino se realiza escala</rdfs:comment>
+        <rdfs:label xml:lang="es">hace_escala</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -189,6 +237,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="es">Nombre completo de la dirección de un lugar</rdfs:comment>
+        <rdfs:label xml:lang="es">nombre_direccion</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -200,6 +250,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="es">Nombre completo de un país</rdfs:comment>
+        <rdfs:label xml:lang="es">nombre_pais</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -210,6 +262,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="es">Sector dedicado en una actividad laboral</rdfs:comment>
+        <rdfs:label xml:lang="es">sector_trabajo</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -221,6 +275,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment xml:lang="es">Vía de una dirección (calle, avenida, carretera, camino, etc)</rdfs:comment>
+        <rdfs:label xml:lang="es">via_direccion</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -238,7 +294,10 @@
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad">
+        <rdfs:comment xml:lang="es">Actividad a realizar en el destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">Actividad</rdfs:label>
+    </owl:Class>
     
 
 
@@ -246,6 +305,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadDeportiva">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+        <rdfs:comment xml:lang="es">Actividad para realizar deporte</rdfs:comment>
+        <rdfs:label xml:lang="es">ActividadDeportiva</rdfs:label>
     </owl:Class>
     
 
@@ -254,6 +315,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadGastronomia">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+        <rdfs:comment xml:lang="es">Actividad relacionada con la gastronomía</rdfs:comment>
+        <rdfs:label xml:lang="es">ActividadGastronomia</rdfs:label>
     </owl:Class>
     
 
@@ -262,6 +325,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadTrabajo">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+        <rdfs:comment xml:lang="es">Actividad para viajes de negocios, laboral</rdfs:comment>
+        <rdfs:label xml:lang="es">ActividadTrabajo</rdfs:label>
     </owl:Class>
     
 
@@ -270,6 +335,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Actividad"/>
+        <rdfs:comment xml:lang="es">Actividades que implican la visita a un lugar</rdfs:comment>
+        <rdfs:label xml:lang="es">ActividadVisita</rdfs:label>
     </owl:Class>
     
 
@@ -278,6 +345,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Apartamento">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+        <rdfs:comment xml:lang="es">Estancias con habitación, baño y cocina</rdfs:comment>
+        <rdfs:label xml:lang="es">Apartamento</rdfs:label>
     </owl:Class>
     
 
@@ -286,6 +355,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:comment xml:lang="es">Aviones de pasajeros comerciales y privados</rdfs:comment>
+        <rdfs:label xml:lang="es">Avion</rdfs:label>
     </owl:Class>
     
 
@@ -294,6 +365,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Barco">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:comment xml:lang="es">Barcos y cruceros</rdfs:comment>
+        <rdfs:label xml:lang="es">Barco</rdfs:label>
     </owl:Class>
     
 
@@ -302,13 +375,18 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#CasaRural">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+        <rdfs:comment xml:lang="es">Estancia localizada en un lugar de campo</rdfs:comment>
+        <rdfs:label xml:lang="es">CasaRural</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#DestinoTuristico">
+        <rdfs:comment xml:lang="es">Destino al que se viaja, con lugar, actividad, estancia y medio de transporte</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTurístico</rdfs:label>
+    </owl:Class>
     
 
 
@@ -334,6 +412,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destinos a los que se visita para una actividad cultural (incluido museos)</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTuristicoCultural</rdfs:label>
     </owl:Class>
     
 
@@ -360,6 +440,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destinos turísticos relacionados con el deporte</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTuristicoDeportivo</rdfs:label>
     </owl:Class>
     
 
@@ -378,6 +460,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destinos turísticos para realizar una actividad laboral</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTurísticoEmpleo</rdfs:label>
     </owl:Class>
     
 
@@ -396,6 +480,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destino turístico para una actividad gastronómica</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTurísticoGastronomico</rdfs:label>
     </owl:Class>
     
 
@@ -423,6 +509,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destino turístico a bajo coste (&lt; 500€)</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTuristicoLowCost</rdfs:label>
     </owl:Class>
     
 
@@ -441,19 +529,27 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Destinos turísticos en el mar (medio de transporte en barco)</rdfs:comment>
+        <rdfs:label xml:lang="es">DestinoTuristicoOceanico</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Direccion">
+        <rdfs:comment xml:lang="es">Dirección de un lugar</rdfs:comment>
+        <rdfs:label xml:lang="es">Dirección</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Estancia">
+        <rdfs:comment xml:lang="es">Estancia en la que se debe alojar un viajero que realiza un destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">Estancia</rdfs:label>
+    </owl:Class>
     
 
 
@@ -471,19 +567,27 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Estancias con baño y habitación</rdfs:comment>
+        <rdfs:label xml:lang="es">Hotel</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte">
+        <rdfs:comment xml:lang="es">Medio de transporte con el que se llega al destino</rdfs:comment>
+        <rdfs:label xml:lang="es">MedioTransporte</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais -->
 
-    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais"/>
+    <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Pais">
+        <rdfs:comment xml:lang="es">Pais en el que se encuentra el destino turístico</rdfs:comment>
+        <rdfs:label xml:lang="es">Pais</rdfs:label>
+    </owl:Class>
     
 
 
@@ -491,6 +595,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Tren">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#MedioTransporte"/>
+        <rdfs:comment xml:lang="es">Tren, AVE y demás tipos de transportes similares.</rdfs:comment>
+        <rdfs:label xml:lang="es">Tren</rdfs:label>
     </owl:Class>
     
 
@@ -512,6 +618,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="es">Engloba el pais de la estancia y la direccion</rdfs:comment>
+        <rdfs:label xml:lang="es">Ubicacion</rdfs:label>
     </owl:Class>
     
 
@@ -520,6 +628,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaCultural">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
+        <rdfs:comment xml:lang="es">Visita a lugares históricos u ocio en general (música, cine, teatro)</rdfs:comment>
+        <rdfs:label xml:lang="es">VisitaCultural</rdfs:label>
     </owl:Class>
     
 
@@ -528,6 +638,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaDeportiva">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
+        <rdfs:comment xml:lang="es">Visitar un campeonato deportivo como espectador</rdfs:comment>
+        <rdfs:label xml:lang="es">VisitaDeportiva</rdfs:label>
     </owl:Class>
     
 
@@ -536,6 +648,8 @@
 
     <owl:Class rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#VisitaMuseo">
         <rdfs:subClassOf rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#ActividadVisita"/>
+        <rdfs:comment xml:lang="es">Visitar un museo</rdfs:comment>
+        <rdfs:label xml:lang="es">VisitaMuseo</rdfs:label>
     </owl:Class>
     
 
@@ -626,7 +740,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#iberia-avion">
         <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion"/>
-        <turism-ontology:clase_trasporte>turista</turism-ontology:clase_trasporte>
+        <turism-ontology:clase_trasporte>Primera</turism-ontology:clase_trasporte>
         <turism-ontology:hace_escala rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</turism-ontology:hace_escala>
     </owl:NamedIndividual>
     
@@ -675,7 +789,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#vuelo-binter">
         <rdf:type rdf:resource="http://www.tk.org/turism/ontologies/2020/4/turism-ontology#Avion"/>
-        <turism-ontology:clase_trasporte>Normal</turism-ontology:clase_trasporte>
+        <turism-ontology:clase_trasporte>Standar</turism-ontology:clase_trasporte>
         <turism-ontology:hace_escala rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</turism-ontology:hace_escala>
     </owl:NamedIndividual>
     
